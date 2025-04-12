@@ -1,4 +1,3 @@
-
 export interface Article {
   id: string;
   title: string;
@@ -50,7 +49,7 @@ export const articles: Article[] = [
     date: "2023-10-15",
     category: "Akhlak",
     image: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f",
-    featured: true
+    featured: true,
   },
   {
     id: "2",
@@ -90,7 +89,7 @@ export const articles: Article[] = [
     date: "2023-09-28",
     category: "Al-Qur'an",
     image: "https://images.unsplash.com/photo-1609599006353-e629a7d00e9f",
-    featured: true
+    featured: true,
   },
   {
     id: "3",
@@ -124,7 +123,7 @@ export const articles: Article[] = [
     date: "2023-11-05",
     category: "Pendidikan",
     image: "https://images.unsplash.com/photo-1577996693361-3a3d96306d4d",
-    featured: false
+    featured: false,
   },
   {
     id: "4",
@@ -158,7 +157,7 @@ export const articles: Article[] = [
     date: "2023-10-22",
     category: "Sosial",
     image: "https://images.unsplash.com/photo-1517292987719-0369a794ec0f",
-    featured: false
+    featured: false,
   },
   {
     id: "5",
@@ -198,7 +197,7 @@ export const articles: Article[] = [
     date: "2023-10-10",
     category: "Ibadah",
     image: "https://images.unsplash.com/photo-1562693315-673a56307dc3",
-    featured: true
+    featured: true,
   },
   {
     id: "6",
@@ -238,11 +237,53 @@ export const articles: Article[] = [
     date: "2023-11-12",
     category: "Ibadah",
     image: "https://images.unsplash.com/photo-1519817914152-22d216bb9170",
-    featured: false
+    featured: false,
   },
   {
     id: "7",
     title: "Adab Makan dan Minum dalam Islam",
+    excerpt: "Islam mengajarkan adab dalam segala hal, termasuk dalam makan dan minum. Artikel ini membahas adab makan dan minum dalam Islam.",
+    content: `<div class="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-lg space-y-6">
+  <h2 class="text-3xl font-bold text-center text-green-700">Adab Makan dan Minum dalam Islam</h2>
+
+  <p class="text-gray-700">
+    Islam mengajarkan umatnya untuk menjaga adab dalam setiap aspek kehidupan, termasuk dalam hal makan dan minum. 
+    Adab-adab ini bukan hanya soal sopan santun, tetapi juga mengandung nilai-nilai spiritual, kebersihan, dan kesehatan.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-green-600 mt-6">Beberapa Adab Makan dan Minum</h3>
+  <ul class="list-disc list-inside text-gray-700 space-y-2">
+    <li><strong>Mengucapkan Bismillah:</strong> Rasulullah ﷺ bersabda, “Jika salah seorang di antara kalian makan, hendaklah ia menyebut nama Allah...” (HR. Bukhari dan Muslim).</li>
+    <li><strong>Makan dan Minum dengan Tangan Kanan:</strong> Ini adalah sunnah yang diajarkan oleh Nabi ﷺ sebagai bentuk kebaikan dan keberkahan.</li>
+    <li><strong>Duduk Saat Makan:</strong> Rasulullah ﷺ tidak makan sambil berdiri. Duduk dengan tenang menunjukkan kesopanan dan kehati-hatian.</li>
+    <li><strong>Tidak Meniup Makanan atau Minuman:</strong> Rasulullah melarang meniup makanan atau minuman karena bisa membawa kotoran atau penyakit.</li>
+    <li><strong>Tidak Berlebihan:</strong> Islam melarang israf (berlebihan) dalam makan dan minum. “Makan dan minumlah, dan jangan berlebihan.” (QS. Al-A’raf: 31)</li>
+    <li><strong>Mengakhiri dengan Alhamdulillah:</strong> Mengucap syukur setelah makan adalah tanda keimanan dan rasa terima kasih kepada Allah ﷻ.</li>
+  </ul>
+
+  <h3 class="text-2xl font-semibold text-green-600 mt-6">Manfaat Adab Makan dan Minum</h3>
+  <p class="text-gray-700">
+    Dengan mengikuti adab makan dan minum, umat Islam tidak hanya mendapatkan pahala, tetapi juga membentuk kebiasaan hidup sehat dan bersih. 
+    Adab ini juga mendidik kita untuk lebih bersyukur, menghargai makanan, dan menjaga hubungan sosial saat makan bersama.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-green-600 mt-6">Kesimpulan</h3>
+  <p class="text-gray-700">
+    Islam mengajarkan bahwa setiap tindakan, sekecil apa pun, memiliki nilai ibadah jika dilakukan sesuai sunnah. 
+    Makan dan minum adalah aktivitas sehari-hari yang bisa menjadi ladang pahala jika dilakukan dengan adab yang benar. 
+    Maka dari itu, marilah kita menghidupkan sunnah dalam kehidupan kita sehari-hari, termasuk dalam hal makan dan minum.
+  </p>
+</div>
+`,
+    author: "Iqbal M. Adiatma",
+    date: "2025-04-13",
+    category: "Adab",
+    image: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0",
+    featured: true,
+  },
+  {
+    id: "8",
+    title: "Makan minum emang harus pas?",
     excerpt: "Islam mengajarkan adab dalam segala hal, termasuk dalam makan dan minum. Artikel ini membahas adab makan dan minum dalam Islam.",
     content: `
       <p class="mb-4">Islam adalah agama yang sempurna dan mengatur segala aspek kehidupan manusia, termasuk adab dalam makan dan minum. Berikut adalah beberapa adab makan dan minum dalam Islam:</p>
@@ -274,30 +315,28 @@ export const articles: Article[] = [
     date: "2023-09-20",
     category: "Kesehatan",
     image: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0",
-    featured: false
-  }
+    featured: false,
+  },
 ];
 
 export const getArticleById = (id: string): Article | undefined => {
-  return articles.find(article => article.id === id);
+  return articles.find((article) => article.id === id);
 };
 
 export const getFeaturedArticles = (): Article[] => {
-  return articles.filter(article => article.featured);
+  return articles.filter((article) => article.featured);
 };
 
 export const getRecentArticles = (count: number = 3): Article[] => {
-  return [...articles]
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, count);
+  return [...articles].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, count);
 };
 
 export const getArticlesByCategory = (category: string): Article[] => {
-  return articles.filter(article => article.category === category);
+  return articles.filter((article) => article.category === category);
 };
 
 export const getAllCategories = (): string[] => {
-  const categories = articles.map(article => article.category);
+  const categories = articles.map((article) => article.category);
   return [...new Set(categories)];
 };
 
@@ -305,8 +344,8 @@ export const getAllCategories = (): string[] => {
 export const searchArticles = (query: string): Article[] => {
   const lowercaseQuery = query.toLowerCase();
   return articles.filter(
-    article => 
-      article.title.toLowerCase().includes(lowercaseQuery) || 
+    (article) =>
+      article.title.toLowerCase().includes(lowercaseQuery) ||
       article.content.toLowerCase().includes(lowercaseQuery) ||
       article.excerpt.toLowerCase().includes(lowercaseQuery) ||
       article.author.toLowerCase().includes(lowercaseQuery) ||
