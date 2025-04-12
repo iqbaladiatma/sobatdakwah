@@ -313,3 +313,4 @@ export const searchArticles = (query: string): Article[] => {
       article.category.toLowerCase().includes(lowercaseQuery)
   );
 };
+// tambah
