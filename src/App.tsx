@@ -14,6 +14,7 @@ import ArticleEditor from "./pages/ArticleEditor";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import { isOwner } from "./utils/authUtils";
+import { Analytics } from "@vercel/analytics/react";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <Analytics />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/articles" element={<Articles />} />
