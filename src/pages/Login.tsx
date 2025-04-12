@@ -103,7 +103,7 @@ const Login = () => {
                         />
                       </div>
                       <p className="text-xs text-right mt-1 text-gray-500">
-                        * Demo: username = admin, password = admin123
+                        <a href="#" className="hover:underline">Lupa password?</a>
                       </p>
                     </div>
                   </div>
