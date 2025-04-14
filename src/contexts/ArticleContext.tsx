@@ -29,15 +29,9 @@ export function ArticleProvider({ children }: { children: ReactNode }) {
   const addArticle = useCallback(
     (articleData: Omit<Article, "id">) => {
       const newId = Math.random().toString(36).substring(2, 9);
-
       const newArticle = {
         ...articleData,
         id: newId,
-        featured: articleData.featured ?? false,
-        title: articleData.title,
-        content: articleData.content,
-        image: articleData.image || "",
-        category: articleData.category,
         createdAt: new Date().toISOString(),
       };
 

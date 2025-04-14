@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import MainLayout from '../layouts/MainLayout';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
@@ -22,7 +21,7 @@ const ContactUs = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       toast({
@@ -51,11 +50,11 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      
+
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white dark:bg-islamic-navy/90 rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-islamic-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Mail className="h-8 w-8 text-islamic-green" />
               </div>
@@ -63,15 +62,15 @@ const ContactUs = () => {
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 Kirim pesan melalui email untuk pertanyaan atau kerjasama
               </p>
-              <a 
-                href="mailto:info@cahaya-artikel.com" 
+              <a
+                href="mailto:info@cahaya-artikel.com"
                 className="text-islamic-green hover:text-islamic-green/80 transition-colors"
               >
                 info@cahaya-artikel.com
               </a>
             </div>
-            
-            <div className="bg-white dark:bg-islamic-navy/90 rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
+
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-islamic-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Phone className="h-8 w-8 text-islamic-green" />
               </div>
@@ -79,15 +78,15 @@ const ContactUs = () => {
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 Hubungi kami melalui telepon untuk informasi lebih lanjut
               </p>
-              <a 
-                href="tel:+6281234567890" 
+              <a
+                href="tel:+6281234567890"
                 className="text-islamic-green hover:text-islamic-green/80 transition-colors"
               >
                 +62 812-3456-7890
               </a>
             </div>
-            
-            <div className="bg-white dark:bg-islamic-navy/90 rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
+
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-islamic-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <MapPin className="h-8 w-8 text-islamic-green" />
               </div>
@@ -101,9 +100,9 @@ const ContactUs = () => {
               </p>
             </div>
           </div>
-          
+
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white dark:bg-islamic-navy/90 rounded-lg shadow-lg overflow-hidden">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="p-8 md:p-12 bg-islamic-green text-white">
                   <h2 className="text-3xl font-bold mb-6">Kirim Pesan</h2>
@@ -124,10 +123,10 @@ const ContactUs = () => {
                       <span>Jl. Islamic Center No. 123, Jakarta</span>
                     </div>
                   </div>
-                  
+
                   <div className="mt-12">
                     <h3 className="text-xl font-bold mb-4">Ikuti Kami</h3>
-                    <div className="flex space-x-4">
+                    <div className="flex space-x-4 justify-center">
                       <a href="#" className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
                         <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                           <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
@@ -146,11 +145,11 @@ const ContactUs = () => {
                     </div>
                   </div>
                 </div>
-                
-                <div className="p-8 md:p-12">
+
+                <div className="p-8 md:p-12 bg-white dark:bg-gray-800">
                   <form onSubmit={handleSubmit}>
                     <div className="mb-4">
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
                         Nama Lengkap
                       </label>
                       <input
@@ -160,13 +159,13 @@ const ContactUs = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-islamic-green dark:bg-gray-800 dark:text-white"
+                        className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-islamic-green bg-white dark:bg-gray-700 dark:text-white"
                         placeholder="Masukkan nama lengkap"
                       />
                     </div>
-                    
+
                     <div className="mb-4">
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
                         Email
                       </label>
                       <input
@@ -176,13 +175,13 @@ const ContactUs = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-islamic-green dark:bg-gray-800 dark:text-white"
+                        className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-islamic-green bg-white dark:bg-gray-700 dark:text-white"
                         placeholder="Masukkan email"
                       />
                     </div>
-                    
+
                     <div className="mb-4">
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
                         Subjek
                       </label>
                       <select
@@ -191,7 +190,7 @@ const ContactUs = () => {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-islamic-green dark:bg-gray-800 dark:text-white"
+                        className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-islamic-green bg-white dark:bg-gray-700 dark:text-white"
                       >
                         <option value="">Pilih Subjek</option>
                         <option value="Pertanyaan">Pertanyaan</option>
@@ -200,9 +199,9 @@ const ContactUs = () => {
                         <option value="Lainnya">Lainnya</option>
                       </select>
                     </div>
-                    
+
                     <div className="mb-6">
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
                         Pesan
                       </label>
                       <textarea
@@ -212,15 +211,15 @@ const ContactUs = () => {
                         onChange={handleChange}
                         required
                         rows={5}
-                        className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-islamic-green dark:bg-gray-800 dark:text-white"
+                        className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-islamic-green bg-white dark:bg-gray-700 dark:text-white"
                         placeholder="Tulis pesan Anda di sini"
                       ></textarea>
                     </div>
-                    
+
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="btn-primary w-full flex items-center justify-center"
+                      className="w-full flex items-center justify-center bg-islamic-green text-white py-3 rounded-md hover:bg-islamic-green/90 transition-colors disabled:bg-islamic-green/50 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? (
                         <svg className="animate-spin h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -239,21 +238,21 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
-      
-      <section className="py-16 islamic-pattern">
+
+      <section className="py-16 islamic-pattern bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-2 text-islamic-navy dark:text-white">
               Peta <span className="text-islamic-green">Lokasi</span>
             </h2>
             <div className="w-24 h-1 bg-islamic-gold mx-auto"></div>
-            <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Temukan lokasi kantor kami di pusat kota Jakarta
             </p>
           </div>
-          
+
           <div className="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-lg">
-            <div className="aspect-w-16 aspect-h-9 relative">
+            <div className="relative">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.724371348581!2d106.82125231476875!3d-6.169457995532573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sen!2sid!4v1649897058182!5m2!1sen!2sid"
                 width="100%"
@@ -265,9 +264,9 @@ const ContactUs = () => {
                 title="Google Maps location of Cahaya Artikel Indonesia"
                 className="w-full h-[450px]"
               ></iframe>
-              
+
               <div className="absolute bottom-0 left-0 right-0 bg-islamic-navy/80 p-4 text-white">
-                <div className="flex items-center">
+                <div className="flex items-center justify-center">
                   <MapPin className="h-5 w-5 mr-2 text-islamic-gold" />
                   <span>Jl. Islamic Center No. 123, Jakarta, Indonesia</span>
                 </div>
@@ -276,19 +275,19 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
-      
-      <section className="py-16 bg-islamic-navy text-white">
+
+      <section className="py-20 bg-islamic-navy text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Siap untuk Bergabung?</h2>
           <p className="text-lg opacity-80 mb-8 max-w-2xl mx-auto">
             Dapatkan update artikel terbaru kami melalui email. Berlangganan sekarang!
           </p>
-          
+
           <form className="max-w-md mx-auto flex">
             <input
               type="email"
               placeholder="Masukkan alamat email Anda"
-              className="px-4 py-3 rounded-l-md w-full focus:outline-none"
+              className="px-4 py-3 rounded-l-md w-full focus:outline-none focus:ring-2 focus:ring-islamic-green bg-white dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600"
             />
             <button
               type="submit"

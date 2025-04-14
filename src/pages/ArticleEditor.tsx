@@ -17,15 +17,13 @@ const ArticleEditor = () => {
   const isNewArticle = window.location.pathname === "/admin/new";
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const currentDate = new Date().toISOString().split("T")[0];
-
   const [formData, setFormData] = useState({
     id: "",
     title: "",
     excerpt: "",
     content: "",
     author: "",
-    date: currentDate,
+    date: new Date().toISOString().split("T")[0],
     category: "",
     image: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f",
     featured: false,
@@ -80,14 +78,14 @@ const ArticleEditor = () => {
         excerpt: "",
         content: "",
         author: "",
-        date: currentDate,
+        date: new Date().toISOString().split("T")[0],
         category: "",
         image: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f",
         featured: false,
       });
       setImagePreview("https://images.unsplash.com/photo-1584551246679-0daf3d275d0f");
     }
-  }, [id, isNewArticle, getArticleById, navigate, toast, currentDate]);
+  }, [id, isNewArticle, getArticleById, navigate, toast]);
 
   const validateForm = () => {
     const newErrors = {
@@ -145,9 +143,10 @@ const ArticleEditor = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    if (!validateForm()) return;
+
     try {
       if (isNewArticle) {
-        // Mode tambah artikel baru
         const newArticle = await addArticle({
           title: formData.title,
           excerpt: formData.excerpt,
@@ -167,7 +166,6 @@ const ArticleEditor = () => {
 
         navigate(`/admin/edit/${newArticle.id}`);
       } else {
-        // Mode edit artikel
         await updateArticle({
           id: id!,
           ...formData,
@@ -181,8 +179,8 @@ const ArticleEditor = () => {
       }
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Terjadi kesalahan saat menyimpan artikel",
+        title: "Terjadi kesalahan",
+        description: "Gagal menyimpan artikel. Silakan coba lagi.",
         variant: "destructive",
       });
     }
